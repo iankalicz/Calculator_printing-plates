@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lib/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="./index.html">Calculators for printing</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <!--<li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>-->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--Form-->
+<!--
+    <div class="form-control container">
+        <form class="row gy-2 gx-3 align-items-center">
+            <h5>Please fill the form below</h5>
+        <div>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Please choose printer machine</option>
+                <option value="Ryobi">Ryobi</option>
+                <option value="Heidi">Heidi</option>
+              </select>
+        </div>
+            <div class="row g-2">
+                <label for="quantity">Quantity</label>
+                <input id="quantity" name="quantity" type="number" placeholder="1" step=10>
+                <small>Please type in the quantity</small>
+            </div>
+            <div class="btn-group">
+                <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+-->
+<div class="container col-6">
+    <form class="inline-form align-items-center">
+        <div class="row">
+          <label class="visually-hidden" for="printingmachine">Please choose printing machnie</label>
+          <select class="form-select" id="printingmachine">
+            <option selected>Choose...</option>
+            <option value="ryobi">Ryobi</option>
+            <option value="heidi">Heidi</option>
+          </select>
+        </div>
+        <div class="row">
+          <label class="visually-hidden" for="quantity">Quantity</label>
+          <input type="number" class="form-control" id="quantity" placeholder="1">
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+</div>
+
     <script src="./script.js"></script>
+
 </body>
+
 </html>
