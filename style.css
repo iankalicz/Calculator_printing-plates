@@ -1,0 +1,17 @@
+#form {
+    margin: 60px 0px 0px 25px;
+}
+
+#nav {
+    color: aliceblue;
+    background-color: black;
+}
+
+#return {
+    padding-top: 50px;
+}
+
+#submit {
+    margin-top: 50px;
+    margin-left: 25px;
+}
