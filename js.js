@@ -9,11 +9,11 @@ function calcAmount() {
     let amount = parseInt(quantity.value) * price;
     //change the selected span with the amount variable
     showAmount.innerHTML = amount;
-    
-    
-    
+
+
+
     /*
-    //make an alert message
+    make an alert message
     alert("Price: " + amount + " Ft");
     
     HTML button for the function

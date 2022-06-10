@@ -1,6 +1,6 @@
 const price = 4.2;
 const package = 50;
-const pal = 28;
+const pal = 2800;
 const developerPricePerLitre = 0.0005;
 const gumPricePerLitre = 0.001;
 
@@ -11,11 +11,8 @@ const heidiLength = 811;
 
 function calcInfos() {
 
-    let machineInput = document.querySelector("#printingmachine").value;
-    let pcsInput = document.querySelector("#quantity").value;
-
-    let machine = machineInput;
-    let pcs = pcsInput;
+    let machine = document.querySelector("#printingmachine").value;
+    let pcs = document.querySelector("#quantity").value;
 
     let height = null;
     let length = null;
