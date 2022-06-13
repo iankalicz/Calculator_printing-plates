@@ -1,9 +1,17 @@
-#guminfos,
-#developerinfos,
+#tables,
 #form,
-#basicinfos,
 #submit {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+#alert {
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#tables {
+    align-items: center;
 }

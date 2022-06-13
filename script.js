@@ -13,7 +13,17 @@ function calcInfos() {
 
     let machine = document.querySelector("#printingmachine").value;
     let pcs = document.querySelector("#quantity").value;
-
+    
+    if (pcs <= 0 || pcs%1 !== 0 || machine === "unselected"){
+        let alert = document.querySelector("#alert");
+        alert.innerHTML = "Please, choose a machine and insert a positive whole number!";
+        alert.setAttribute("class" , "alert alert-danger");
+        return;
+    } else {
+        let alert = document.querySelector("#alert");
+        alert.setAttribute("class", "visually-hidden")
+    }
+    
     let height = null;
     let length = null;
     let gum = 0.03;
@@ -40,7 +50,7 @@ function calcInfos() {
     let pricePerPal = (pricePerPcsValue * piecesPerPal).toFixed(2)
 
     let showMachineName = document.querySelector("#machineName");
-    showMachineName.innerHTML = machine;
+    showMachineName.innerHTML = "Machine's name: " + machine + "<br>" + " Amount: " + pcs + "<br>";
 
     let showHeight = document.querySelector("#height");
     showHeight.innerHTML = height;

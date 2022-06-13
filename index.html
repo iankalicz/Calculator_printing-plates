@@ -12,8 +12,8 @@
 
 <body>
 
-<!--Nav bar-->
-    
+    <!--Nav bar-->
+
     <nav id="nav" class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
@@ -38,169 +38,171 @@
         </div>
     </nav>
 
-<!--Form-->
+    <!--Form-->
 
-<div id="form">
-    <h5>Please fill the form below:</h5>
-    <form class="align-items-center row">
-        <div class="col-2">
-          <label class="visually-hidden" for="printingmachine">Please choose printing machnie</label>
-          <select class="form-select" id="printingmachine">
-            <option selected>Choose...</option>
-            <option id="ryobiSelected" value="Ryobi">Ryobi</option>
-            <option id="heidiSelected" value="Heidi">Heidi</option>
-          </select>
+    <div id="form">
+        <h5>Please fill the form below:</h5>
+        <form class="align-items-center row">
+            <div class="col-2">
+                <label class="visually-hidden" for="printingmachine">Please choose printing machnie</label>
+                <select class="form-select" id="printingmachine">
+                    <option value="unselected" selected>Choose...</option>
+                    <option id="ryobiSelected" value="Ryobi">Ryobi</option>
+                    <option id="heidiSelected" value="Heidi">Heidi</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <label class="visually-hidden" for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" placeholder="1" step="10">
+            </div>
+            <div class="col">
+                <button onclick="calcInfos()" type="button" class="btn btn-primary">Submit</button>
+            </div>
+            <div id="alert" class=""></div>
+        </form>
+    </div>
+
+    <!--Table-->
+    <div id="tables">
+        <div id="basicinfos">
+            <table class="table-striped table">
+                <h5 id="machineName">Machine's name: <br> Amount: <br></h5>
+                <h6>Basic infos</h6>
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Height</td>
+                        <td id="height"> </td>
+                        <td>mm</td>
+                    </tr>
+                    <tr>
+                        <td>Length</td>
+                        <td id="length"> </td>
+                        <td>mm</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="price"> </td>
+                        <td>€/m2</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td id="m2PerPcs"></td>
+                        <td>m2/pcs</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="pricePerPcsValue"></td>
+                        <td>€/pc</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="pricePerPackage"></td>
+                        <td>€/package</td>
+                    </tr>
+                    <tr>
+                        <td>Pieces</td>
+                        <td id="piecesPerPal"></td>
+                        <td>pcs/pal</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="pricePerPal"></td>
+                        <td>€/pal</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
-        <div class="col-2">
-          <label class="visually-hidden" for="quantity">Quantity</label>
-          <input type="number" class="form-control" id="quantity" placeholder="1" step="10">
+
+        <div id="guminfos">
+            <table class="table-striped table">
+                <h6>Gum infos</h6>
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Needed Agfa gum</td>
+                        <td id="gum"> </td>
+                        <td>litre</td>
+                    </tr>
+                    <tr>
+                        <td>Needed Agfa gum</td>
+                        <td id="gumNeededBottle"> </td>
+                        <td>bottle</td>
+                    </tr>
+                    <tr>
+                        <td>Needed Agfa gum</td>
+                        <td id="gumNeededBottleLitre"> </td>
+                        <td>litre of bottles</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="gumPricePerLitre"></td>
+                        <td>€/litre</td>
+                    </tr>
+                    <tr>
+                        <td>Total price</td>
+                        <td id="gumTotalPrice"></td>
+                        <td>€</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col">
-          <button onclick="calcInfos()" type="button" class="btn btn-primary">Submit</button>
+
+        <div id="developerinfos">
+            <table class="table-striped table">
+                <h6>Developer infos</h6>
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Value</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Needed Saphire developer</td>
+                        <td id="developer"> </td>
+                        <td>litre</td>
+                    </tr>
+                    <tr>
+                        <td>Needed Saphire developer</td>
+                        <td id="developerNeededBottle"> </td>
+                        <td>bottle</td>
+                    </tr>
+                    <tr>
+                        <td>Needed Saphire developer</td>
+                        <td id="developerNeededBottleLitre"> </td>
+                        <td>litre of bottles</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="developerPricePerLitre"></td>
+                        <td>€/litre</td>
+                    </tr>
+                    <tr>
+                        <td>Total price</td>
+                        <td id="developerTotalPrice"></td>
+                        <td>€</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-      </form>
-</div>
+    </div>
 
-<!--Table-->
-
-<div id="basicinfos">
-    <table class="table-striped table">
-        <h5 id="machineName">Machine's name</h5>
-        <h6>Basic infos</h6>
-        <thead>
-            <tr>
-                <th>Info</th>
-                <th>Value</th>
-                <th>Unit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Height</td>
-                <td id="height"> </td>
-                <td>mm</td>
-            </tr>
-            <tr>
-                <td>Length</td>
-                <td id="length"> </td>
-                <td>mm</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="price"> </td>
-                <td>€/m2</td>
-            </tr>
-            <tr>
-                <td>Size</td>
-                <td id="m2PerPcs"></td>
-                <td>m2/pcs</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="pricePerPcsValue"></td>
-                <td>€/pc</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="pricePerPackage"></td>
-                <td>€/package</td>
-            </tr>
-            <tr>
-                <td>Pieces</td>
-                <td id="piecesPerPal"></td>
-                <td>pcs/pal</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="pricePerPal"></td>
-                <td>€/pal</td>
-            </tr>
-        </tbody>
-    </table>
-
-</div>
-
-<div id="guminfos">
-    <table class="table-striped table">
-        <h6>Gum infos</h6>
-        <thead>
-            <tr>
-                <th>Info</th>
-                <th>Value</th>
-                <th>Unit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Needed Agfa gum</td>
-                <td id="gum"> </td>
-                <td>litre</td>
-            </tr>
-            <tr>
-                <td>Needed Agfa gum</td>
-                <td id="gumNeededBottle"> </td>
-                <td>bottle</td>
-            </tr>
-            <tr>
-                <td>Needed Agfa gum</td>
-                <td id="gumNeededBottleLitre"> </td>
-                <td>litre of bottles</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="gumPricePerLitre"></td>
-                <td>€/litre</td>
-            </tr>
-            <tr>
-                <td>Total price</td>
-                <td id="gumTotalPrice"></td>
-                <td>€</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div id="developerinfos">
-    <table class="table-striped table">
-        <h6>Developer infos</h6>
-        <thead>
-            <tr>
-                <th>Info</th>
-                <th>Value</th>
-                <th>Unit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Needed Saphire developer</td>
-                <td id="developer"> </td>
-                <td>litre</td>
-            </tr>
-            <tr>
-                <td>Needed Saphire developer</td>
-                <td id="developerNeededBottle"> </td>
-                <td>bottle</td>
-            </tr>
-            <tr>
-                <td>Needed Saphire developer</td>
-                <td id="developerNeededBottleLitre"> </td>
-                <td>litre of bottles</td>
-            </tr>
-            <tr>
-                <td>Price</td>
-                <td id="developerPricePerLitre"></td>
-                <td>€/litre</td>
-            </tr>
-            <tr>
-                <td>Total price</td>
-                <td id="developerTotalPrice"></td>
-                <td>€</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
