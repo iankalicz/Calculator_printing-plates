@@ -4,10 +4,8 @@ const pal = 2800;
 const developerPricePerLitre = 0.0005;
 const gumPricePerLitre = 0.001;
 
-const ryobiHeigth = 760;
-const ryobiLength = 605;
-const heidiHeigth = 1055;
-const heidiLength = 811;
+const ryobiSize = [760,605];
+const heidiSize = [1055,811];
 
 function calcInfos() {
 
@@ -31,12 +29,12 @@ function calcInfos() {
 
     switch (machine) {
         case "Ryobi":
-            length = ryobiLength;
-            height = ryobiHeigth;
+            length = ryobiSize[0];
+            height = ryobiSize[1];
             break;
         case "Heidi":
-            length = heidiLength;
-            height = heidiHeigth;
+            length = heidiSize[0];
+            height = heidiSize[1];
             break;
         default:
             console.error()
