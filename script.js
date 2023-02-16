@@ -76,7 +76,7 @@ function calcInfos() {
 
     let developerNeededBottle = Math.ceil((developer / 20)).toFixed(2);
     let developerTotalPrice = (developerPricePerLitre * developerNeededBottle*20).toFixed(2);
-    let developerNeededBottleLitre = gumNeededBottle * 20;
+    let developerNeededBottleLitre = developerNeededBottle * 20;
 
 
     let showGum = document.querySelector("#gum");
