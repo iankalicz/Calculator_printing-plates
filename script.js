@@ -1,4 +1,4 @@
-const price = 4.2;
+const price = 3.8;
 const package = 50;
 const pal = 2800;
 const developerPricePerLitre = 0.0005;
